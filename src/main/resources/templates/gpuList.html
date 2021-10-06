@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="C:\Users\Lara\Desktop/gpower.png" alt="">
+    G-Power
+  </a>
+</nav>
+<center>
+  <div style="width: 60%; margin-top: 100px">
+
+
+    <th:block th:each="gpu : ${gpuList}">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Autor: <b th:text="${gpu.getProducent()}"></b></h6>
+          <p class="card-text" style="overflow:hidden;" th:text="${gpu.getMemory()}"></p>
+        </div>
+        </div>
+    </th:block>
+      </div>
+
+      <br/>
+
+  </div>
+</center>
+</body>
+
+</html>
